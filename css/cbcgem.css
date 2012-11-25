@@ -1,0 +1,201 @@
+/* ----- CBC GEM ---- */
+/* 25px */
+/* 95px */
+/*20*/
+/* ----------- MIXINS ------------- */
+* {
+  margin: 0;
+  padding: 0;
+  color: inherit;
+  text-decoration: none;
+  background-color: white; }
+
+.cbcgem {
+  width: 300px;
+  height: 300px;
+  margin: auto auto; }
+
+.half_circle {
+  width: 90px;
+  height: 45px;
+  border-radius: 90px 90px 0 0;
+  -moz-border-radius: 90px 90px 0 0;
+  -webkit-border-radius: 90px 90px 0 0;
+  -ms-border-radius: 90px 90px 0 0;
+  -o-border-radius: 90px 90px 0 0;
+  background: red;
+  float: left;
+  margin: 5.0px; }
+
+.half_circle_bottom {
+  width: 90px;
+  height: 45px;
+  border-radius: 0 0 90px 90px;
+  -moz-border-radius: 0 0 90px 90px;
+  -webkit-border-radius: 0 0 90px 90px;
+  background: red;
+  float: left;
+  margin: 5.0px;
+  margin-top: -22.0px; }
+
+.half_circle_bottom_big {
+  width: 90px;
+  height: 45px;
+  border-radius: 0 0 90px 90px;
+  -moz-border-radius: 0 0 90px 90px;
+  -webkit-border-radius: 0 0 90px 90px;
+  background: red;
+  float: left;
+  margin: 5.0px; }
+
+.half_circle_right {
+  width: 45px;
+  height: 90px;
+  border-radius: 0 90px 90px 0;
+  -moz-border-radius: 0 90px 90px 0;
+  -webkit-border-radius: 0px 90px 90px 0;
+  background: red;
+  float: left;
+  margin: 5.0px;
+  margin-top: 5.4px;
+  margin-bottom: 5.4px;
+  margin-left: -21.6px; }
+
+.half_circle_right_big {
+  width: 45px;
+  height: 90px;
+  border-radius: 0 90px 90px 0;
+  -moz-border-radius: 0 90px 90px 0;
+  -webkit-border-radius: 0 90px 90px 0;
+  background: red;
+  float: left;
+  margin: 5.0px; }
+
+.half_circle_left {
+  width: 45px;
+  height: 90px;
+  border-radius: 90px 0 0 90px;
+  -moz-border-radius: 90px 0 0 90px;
+  -webkit-border-radius: 90px 0 0 90px;
+  background: red;
+  float: left;
+  margin: 5.0px; }
+
+.half_circle_left_big {
+  width: 45px;
+  height: 90px;
+  border-radius: 90px 0 0 90px;
+  -moz-border-radius: 90px 0 0 90px;
+  -webkit-border-radius: 90px 0 0 90px;
+  background: red;
+  float: left;
+  margin: 5.0px; }
+
+.quarter_circle_top_left {
+  width: 45px;
+  height: 45px;
+  border-radius: 90px 0 0 0;
+  -moz-border-radius: 90px 0 0 0;
+  -webkit-border-radius: 90px 0 0 0;
+  background: red;
+  float: left;
+  margin: 5.0px; }
+
+.quarter_circle_top_right {
+  width: 45px;
+  height: 45px;
+  border-radius: 0 90px 0 0;
+  -moz-border-radius: 0 90px 0 0;
+  -webkit-border-radius: 0 90px 0 0;
+  background: red;
+  float: left;
+  margin: 5.0px; }
+
+.circle {
+  height: 90px;
+  width: 90px;
+  border-radius: 45px;
+  -moz-border-radius: 45px;
+  -webkit-border-radius: 45px;
+  background: red;
+  float: left;
+  margin: 5.0px; }
+
+.quarter_circle_bottom_left {
+  width: 45px;
+  height: 45px;
+  border-radius: 0 0 90px 0;
+  -moz-border-radius: 0 0 90px 0;
+  -webkit-border-radius: 0 0 90px 0;
+  background: red;
+  float: left;
+  margin: 5.0px; }
+
+.quarter_circle_bottom_right {
+  width: 45px;
+  height: 45px;
+  border-radius: 0 0 0 90px;
+  -moz-border-radius: 0 0 0 90px;
+  -webkit-border-radius: 0 0 0 90px;
+  background: red;
+  float: left;
+  margin: 5.0px; }
+
+.overlay_bottom {
+  width: 99.0px;
+  height: 27px;
+  overflow: hidden;
+  float: left;
+  margin-top: 27px; }
+
+.overlay_top {
+  width: 99.0px;
+  height: 27px;
+  overflow: hidden;
+  float: left;
+  margin-top: 5.4px; }
+
+.overlay_right {
+  width: 29.97px;
+  overflow: hidden;
+  float: left; }
+
+.overlay_left {
+  width: 29.97px;
+  overflow: hidden;
+  float: left; }
+
+.row1, .row5 {
+  width: 300px;
+  float: left;
+  height: 54px;
+  margin-left: 95.0px; }
+
+.row2 {
+  width: 300px;
+  float: left;
+  margin-left: 40.0px; }
+
+.row3 {
+  width: 300px;
+  margin-left: 10.06px;
+  float: left; }
+
+.row4 {
+  width: 300px;
+  margin-left: 40.0px;
+  height: 54px;
+  float: left; }
+
+.info {
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", sans-serif;
+  text-align: center; }
+  .info h1 {
+    font-size: 20px; }
+  .info .devnotes {
+    font-size: 10px;
+    margin-top: 20px; }
+    .info .devnotes .disclaimer {
+      margin-top: 10px; }
+  .info a {
+    color: red; }

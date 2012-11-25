@@ -1,0 +1,276 @@
+
+
+/* ----- CBC GEM ---- */
+
+$gem_box_size: 300px;
+
+$gem_box_width: $gem_box_size;
+$gem_box_height: $gem_box_size;
+
+
+$full_circle_height:$gem_box_size * 0.3;
+$full_circle_width:$gem_box_size * 0.3;
+$half_circle_height:($full_circle_height/2);
+$half_circle_width:($full_circle_width/2);
+
+$gem_row_width: $gem_box_size;
+$gem_row_height: $full_circle_height * 0.6;
+
+
+
+$overlay_height: $full_circle_height * 1.10;
+$overlay_vertical_width: $full_circle_width * 1.10;
+$overlay_vertical_height: $full_circle_width * 0.30; /* 25px */
+$overlay_horizontal_width: $full_circle_width * 0.333 ;
+$overlay_horizontal_height: $overlay_vertical_height * 0.2;
+
+$margin: $full_circle_width * 0.0555555;
+$overlay_width: $full_circle_width + $margin; /* 95px */
+$margin_row_upper: ($full_circle_width + $full_circle_width +(4 * $margin))/2; /*20*/
+$margin_row_outer: $gem_box_size - ((2* $full_circle_width) + (2 * $overlay_horizontal_width) + (9 * $margin))-$margin;
+
+
+$cbc_red: #ff0000;
+$cbc_black: #000;
+$cbc_gem_color: $cbc_red;
+$gem_background_color: #fff;
+$circle_border_radius: 90px;
+
+$row_margin_left: ($full_circle_width/2)- $margin;
+
+/* ----------- MIXINS ------------- */
+
+
+@mixin common() {
+
+	 background:$cbc_red;
+     float:left;
+	 margin:$margin;
+}
+
+@mixin overlay_common() {
+
+	overflow:hidden;
+	float:left;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	color: inherit;
+	text-decoration: none;
+	background-color:$gem_background_color;
+}
+
+.cbcgem {
+	width: $gem_box_width;
+	height: $gem_box_height;
+	margin: auto auto;
+}
+
+
+.half_circle{
+     width:$full_circle_width;
+     height:$half_circle_height;
+	 border-radius: $circle_border_radius $circle_border_radius 0 0;
+     -moz-border-radius: $circle_border_radius $circle_border_radius 0 0;
+     -webkit-border-radius: $circle_border_radius $circle_border_radius 0 0;
+	-ms-border-radius: $circle_border_radius $circle_border_radius 0 0;
+	-o-border-radius: $circle_border_radius $circle_border_radius 0 0;
+	 @include common();
+}
+
+
+.half_circle_bottom{
+     width:$full_circle_width;
+     height:$half_circle_height;
+     border-radius: 0 0 $circle_border_radius $circle_border_radius;
+     -moz-border-radius: 0 0 $circle_border_radius $circle_border_radius;
+     -webkit-border-radius: 0 0 $circle_border_radius $circle_border_radius;
+	 @include common();
+     margin-top:-$overlay_vertical_height+$margin; 
+}
+
+.half_circle_bottom_big{
+     width:$full_circle_width;
+     height:$half_circle_height;
+     border-radius: 0 0 $circle_border_radius $circle_border_radius;
+     -moz-border-radius: 0 0 $circle_border_radius $circle_border_radius;
+     -webkit-border-radius: 0 0 $circle_border_radius $circle_border_radius;
+	 @include common();
+}
+
+
+.half_circle_right{
+
+     width:$half_circle_width;
+     height:$full_circle_height;
+
+     border-radius: 0 $circle_border_radius $circle_border_radius 0;
+     -moz-border-radius: 0 $circle_border_radius $circle_border_radius 0;
+     -webkit-border-radius:  0px $circle_border_radius $circle_border_radius 0;
+	 @include common();
+    margin-top:$overlay_horizontal_height;
+	margin-bottom:$overlay_horizontal_height;
+	margin-left:-(4*$overlay_horizontal_height);
+
+    
+}
+
+
+
+.half_circle_right_big{
+     width:$half_circle_width;
+     height:$full_circle_height;
+     border-radius: 0 $circle_border_radius $circle_border_radius 0;
+     -moz-border-radius: 0 $circle_border_radius $circle_border_radius 0;
+     -webkit-border-radius:  0 $circle_border_radius $circle_border_radius 0;
+	 @include common();
+}
+
+.half_circle_left{
+     width:$half_circle_width;
+     height:$full_circle_height;
+     border-radius: $circle_border_radius 0 0 $circle_border_radius;
+     -moz-border-radius: $circle_border_radius 0 0 $circle_border_radius;
+     -webkit-border-radius: $circle_border_radius 0 0 $circle_border_radius;
+	 @include common();
+       
+}
+
+
+
+.half_circle_left_big{
+     width:$half_circle_width;
+     height:$full_circle_height;
+     border-radius: $circle_border_radius 0 0 $circle_border_radius;
+     -moz-border-radius: $circle_border_radius 0 0 $circle_border_radius;
+     -webkit-border-radius: $circle_border_radius 0 0 $circle_border_radius;
+	 @include common();
+
+}
+
+
+.quarter_circle_top_left{
+     width:$half_circle_width;
+     height:$half_circle_height;
+     border-radius: $circle_border_radius 0 0 0;
+     -moz-border-radius: $circle_border_radius 0 0 0;
+     -webkit-border-radius: $circle_border_radius 0 0 0;
+	 @include common();
+}
+
+.quarter_circle_top_right{
+     width:$half_circle_width;
+     height:$half_circle_height;
+     border-radius: 0 $circle_border_radius 0 0;
+     -moz-border-radius: 0 $circle_border_radius 0 0;
+     -webkit-border-radius: 0 $circle_border_radius 0 0;
+	 @include common();
+}
+
+.circle{
+     height:$full_circle_height;
+     width:$full_circle_width;
+     border-radius: $full_circle_height/2;
+     -moz-border-radius: $full_circle_height/2;
+     -webkit-border-radius: $full_circle_height/2;
+	 @include common();
+}
+
+.quarter_circle_bottom_left{
+     width:$half_circle_width;
+     height:$half_circle_height;
+     border-radius: 0 0 $circle_border_radius 0;
+     -moz-border-radius: 0 0 $circle_border_radius 0;
+     -webkit-border-radius: 0 0 $circle_border_radius 0;
+	 @include common();
+}
+
+.quarter_circle_bottom_right{
+     width:$half_circle_width;
+     height:$half_circle_height;
+     border-radius: 0 0 0 $circle_border_radius;
+     -moz-border-radius: 0 0 0 $circle_border_radius;
+     -webkit-border-radius: 0 0 0 $circle_border_radius;
+     @include common();
+
+}
+
+
+.overlay_bottom {
+	width:$overlay_vertical_width;
+	height:$overlay_vertical_height;
+	@include overlay_common();
+	margin-top:$overlay_vertical_height;
+}
+
+.overlay_top {
+	width:$overlay_vertical_width;
+	height:$overlay_vertical_height;
+	@include overlay_common();
+	margin-top:$overlay_horizontal_height;	
+}
+
+.overlay_right {
+	width:$overlay_horizontal_width;
+	@include overlay_common();
+}
+
+.overlay_left {
+	width:$overlay_horizontal_width;
+	@include overlay_common();
+}
+
+
+.row1, .row5 {
+	width: $gem_row_width;
+	float:left;
+	height:$gem_row_height;
+	margin-left:$overlay_width;
+}
+
+.row2 {
+	width: $gem_row_width;
+	float:left;
+	margin-left:$row_margin_left;
+
+}
+
+.row3 {
+	width: $gem_row_width;
+	margin-left:$margin_row_outer;	
+	float:left;
+}
+
+.row4 {
+	width: $gem_row_width;
+	margin-left:$row_margin_left;
+	height:$gem_row_height;
+	float:left;
+}
+
+.info {
+     font-family: "HelveticaNeue-Light", "Helvetica Neue Light",
+             sans-serif;
+     text-align:center;
+
+     & h1 {
+          font-size:20px;
+
+     }
+     & .devnotes {
+          font-size:10px;
+          margin-top:20px;
+          & .disclaimer {
+               margin-top:10px;
+          }
+     }
+
+     a {
+          color:$cbc_red;
+     }
+}
+
+
+
