@@ -6,3 +6,7 @@ A little fun with the CBC GEM, purely created in CSS and HTML (no image). You ca
 Required: SASS 
 
 Disclaimer: The CBC logo being produced by the scss file might not conform with the actual CBC GEM. No guarantee for accuracy of proper measurements of the actual logo.
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/bbinto/cbcgemcss/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
